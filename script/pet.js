@@ -108,19 +108,22 @@ const displayDetails = (idPet) => {
 
 
 //spinner fn
-const handleSearch=() => {
-  document.getElementById("spinner").style.display= "block";
+const handleSearch = () => {
+  document.getElementById("spinner").style.display = "block"; // Show spinner
+  document.getElementById("allItems").style.display = "none"; // Hide cart
   setTimeout(function () {
-    loadAllPhones()
-    },2000)
-    
+    loadAllPhones();
+  }, 2000);
+};
 
-}
 //spinner fn
 const loadAllPhones = () => {
-  document.getElementById("spinner").style.display= "none";
+  document.getElementById("spinner").style.display = "none"; // Hide spinner
+  document.getElementById("allItems").style.display = "grid"; // Show cart (grid class assumed based on your setup)
   console.log("2 sec");
-}
+};
+
+
 
 // for sorting by price
 const fetchAndSortPetsByPrice = () => {
